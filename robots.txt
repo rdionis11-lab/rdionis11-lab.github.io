@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# ЗАМЕНИТЬ: адрес сайта после публикации
+Sitemap: https://rdionis11-lab.github.io/sitemap.xml

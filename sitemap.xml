@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ЗАМЕНИТЬ: адрес сайта после публикации -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://rdionis11-lab.github.io/</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://rdionis11-lab.github.io/articles/rutina.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://rdionis11-lab.github.io/articles/assistent-1c.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://rdionis11-lab.github.io/articles/s-chego-nachat.html</loc>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+</urlset>

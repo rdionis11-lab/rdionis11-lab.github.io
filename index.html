@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1С команда — разработка 1С и внедрение ИИ-агентов</title>
+  <meta name="description" content="Дорабатываем типовые конфигурации, пишем обработки, делаем интеграции с Битрикс24, сайтами и маркетплейсами, переносим данные на новые релизы и внедряем ИИ-агентов в 1С.">
+  <meta name="theme-color" content="#14161a">
+  <script>document.documentElement.classList.add('js');</script>
+  <!-- ЗАМЕНИТЬ: адрес сайта после публикации -->
+  <link rel="canonical" href="https://rdionis11-lab.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="1С команда — разработка 1С и внедрение ИИ-агентов">
+  <meta property="og:description" content="Доработка типовых конфигураций, обработки с нуля, интеграции с Битрикс24, сайтами и маркетплейсами, перенос на новые релизы, ИИ-агенты в 1С.">
+  <meta property="og:url" content="https://rdionis11-lab.github.io/">
+  <!-- /ЗАМЕНИТЬ -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "1С команда",
+    "description": "Разработка 1С и внедрение ИИ-агентов: доработка типовых конфигураций, обработки, интеграции с Битрикс24, сайтами и маркетплейсами, перенос данных на новые релизы.",
+    "url": "https://rdionis11-lab.github.io/",
+    "areaServed": "RU"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#hero"><span class="logo__mark">1С</span>команда</a>
+      <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <ul class="nav__list">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#process">Как работаем</a></li>
+          <li><a href="#cases">Кейсы</a></li>
+          <li><a href="#team">Команда</a></li>
+          <li><a href="#pricing">Цены</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#articles">Статьи</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="#request">Оставить заявку</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__badge">1С команда</p>
+          <h1>Разработка <em>1С</em> и внедрение <em>ИИ-агентов</em></h1>
+          <ul class="hero__dirs">
+            <li>Доработка 1С</li><li>Интеграция с Битрикс24</li><li>ИИ-агенты</li>
+          </ul>
+          <p class="lead">Доработка типовых конфигураций, написание обработок с нуля, интеграции с сайтом и маркетплейсами, перенос данных на новые релизы. Внедряем ИИ-агентов в 1С — чтобы рутину делали не люди. Работаем по договору, закрываем задачи спринтами и остаёмся на сопровождении.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#request">Оставить заявку</a>
+            <a class="link-ghost" href="#services">Посмотреть услуги и цены</a>
+          </div>
+          <ul class="metrics">
+            <li><strong>5<span>+</span> лет</strong> разработки на 1С</li>
+            <li><strong>2–3 <span>нед.</span></strong> до работающего пилота</li>
+            <li><strong>30 <span>мин.</span></strong> бесплатной консультации</li>
+          </ul>
+        </div>
+        <div class="editor" role="img" aria-label="Пример кода на языке 1С: агент разбирает заявку, создаёт сделку в Битрикс24 и готовит ответ менеджеру">
+          <div class="editor__bar" aria-hidden="true">
+            <i class="editor__dot editor__dot--a"></i><i class="editor__dot editor__dot--b"></i><i class="editor__dot editor__dot--c"></i>
+            <span class="editor__name">ОбработкаЗаявки.bsl</span>
+          </div>
+          <pre class="editor__code" aria-hidden="true"><code><span class="cm">// Заявка клиента → ИИ-агент → Битрикс24 и 1С</span>
+<span class="kw">Функция</span> <span class="fn">ОбработатьЗаявку</span>(Заявка) <span class="kw">Экспорт</span>
+
+    Разбор = ИИАгент.<span class="fn">РазобратьОбращение</span>(Заявка.Текст);
+    Сделка = Битрикс24.<span class="fn">СоздатьСделку</span>(Разбор);
+    Остатки = <span class="fn">ОстаткиИЦены</span>(Разбор.Товары);
+
+<span class="hl">    <span class="cm">// Решение остаётся за менеджером</span></span>
+<span class="hl">    <span class="kw">Возврат</span> ИИАгент.<span class="fn">ЧерновикОтвета</span>(Разбор, Остатки);</span>
+
+<span class="kw">КонецФункции</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Проблемы клиента -->
+    <section class="section" id="problems">
+      <div class="container">
+        <h2>Знакомо?</h2>
+        <div class="grid">
+          <article class="card">
+            <svg class="card__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h16M9 9v11"/></svg>
+            <h3>Рутина съедает время</h3>
+            <p>Менеджеры часами переносят данные между 1С, почтой и Битрикс24.</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 6l8 7 8-7"/></svg>
+            <h3>Заявки теряются</h3>
+            <p>Ответ клиенту приходит через час, когда он уже купил у конкурента.</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>
+            <h3>Отчёты вручную</h3>
+            <p>Чтобы ответить на простой вопрос руководителя, кто-то выгружает Excel.</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l9 16H3zM12 10v4M12 17v.5"/></svg>
+            <h3>Ошибки в данных</h3>
+            <p>Дубли контрагентов, неверные артикулы, забытые поля.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="section section--flush" id="services">
+      <div class="container services">
+        <div class="services__aside">
+          <h2>Что мы делаем</h2>
+          <p class="section__descr">Основа нашей работы — разработка на 1С. На неё опираются интеграции с Битрикс24 и ИИ-агенты, которые работают в вашей 1С каждый день.</p>
+          <p class="services__note">Цены указаны «от»: точная сумма зависит от задачи. Опишите её в заявке, и мы предложим формат работы и оценку.</p>
+        </div>
+        <div class="services__groups">
+          <h3 class="services__group">Разработка 1С</h3>
+          <div class="services__list">
+          <details class="service" open>
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L4 17v3h3l5.700-5.700a4 4 0 0 0 5-5l-2.700 2.700-2.300-2.300z"/></svg></span><span class="service__name">Доработка типовых конфигураций <span class="service__price">от 3 500 ₽</span></span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>Новые документы, реквизиты, печатные формы и правила заполнения под ваши процессы. Стараемся делать это расширениями, не меняя типовые объекты.</p>
+              <p class="service__result">Результат: 1С работает так, как устроен ваш бизнес, и продолжает обновляться.</p>
+            </div>
+          </details>
+          <details class="service">
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span><span class="service__name">Обработки с нуля <span class="service__price">от 6 000 ₽</span></span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>Загрузка из Excel, сверки, массовые правки данных, печать этикеток и другие задачи, для которых в типовой конфигурации нет готового инструмента.</p>
+              <p class="service__result">Результат: ручная операция выполняется за один запуск.</p>
+            </div>
+          </details>
+          <details class="service">
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9l2-5h14l2 5M4 9v11h16V9M3 9h18M9 20v-6h6v6"/></svg></span><span class="service__name">Интеграции с сайтом и маркетплейсами <span class="service__price">от 18 000 ₽</span></span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>Обмен товарами, остатками, ценами и заказами между 1С, сайтом и маркетплейсами через HTTP-сервисы, API или файлы.</p>
+              <p class="service__result">Результат: заказы и остатки не приходится переносить вручную.</p>
+            </div>
+          </details>
+          <details class="service">
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2M20 4v5h-5M4 20v-5h5"/></svg></span><span class="service__name">Перенос данных на новые релизы <span class="service__price">от 15 000 ₽</span></span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>Обновляем конфигурацию, переносим доработки и данные, проверяем результат на копии базы до переключения рабочей.</p>
+              <p class="service__result">Результат: новый релиз без потери данных и доработок.</p>
+            </div>
+          </details>
+          <details class="service">
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6zM9 12l2 2 4-4"/></svg></span><span class="service__name">Сопровождение <span class="service__price">от 900 ₽/час</span></span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>После сдачи не исчезаем: правим, дорабатываем, консультируем пользователей и помогаем с обновлениями.</p>
+              <p class="service__result">Результат: есть к кому обратиться, когда задача меняется.</p>
+            </div>
+          </details>
+          </div>
+          <h3 class="services__group">Интеграция с Битрикс24</h3>
+          <div class="services__list">
+          <details class="service">
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span><span class="service__name">Интеграция 1С ↔ Битрикс24 ↔ ИИ</span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>Обмены штатными механизмами: REST, вебхуки, HTTP-сервисы 1С.</p>
+              <p class="service__result">Результат: единые данные без двойного ввода.</p>
+            </div>
+          </details>
+          </div>
+          <h3 class="services__group">ИИ-агенты</h3>
+          <div class="services__list">
+          <details class="service">
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 6l8 7 8-7"/></svg></span><span class="service__name">ИИ-агент для обработки заявок в Битрикс24</span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>Разбирает входящие письма и сообщения, заводит лид и сделку, отвечает клиенту в течение минуты.</p>
+              <p class="service__result">Результат: ни одной потерянной заявки.</p>
+            </div>
+          </details>
+          <details class="service">
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-12 7l-6 2 2-6a8 8 0 1 1 16-3z"/></svg></span><span class="service__name">ИИ-ассистент по данным 1С</span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>Сотрудник спрашивает обычным языком: «сколько отгрузили Ромашке в октябре?», а агент отвечает по данным из 1С.</p>
+              <p class="service__result">Результат: отчёты без программиста.</p>
+            </div>
+          </details>
+          <details class="service">
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM15 3v4h4M9 12h7M9 16h7"/></svg></span><span class="service__name">Обработка документов</span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>Распознавание счетов, накладных, договоров и загрузка в 1С.</p>
+              <p class="service__result">Результат: минус часы ручного ввода.</p>
+            </div>
+          </details>
+          <details class="service">
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg></span><span class="service__name">Аудит процессов</span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>Находим, где ИИ окупится быстрее всего, и считаем экономию до начала работ.</p>
+              <p class="service__result">Результат: план внедрения с цифрами.</p>
+            </div>
+          </details>
+          <details class="service">
+            <summary><span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11.5V17c2 2 10 2 12 0v-5.5"/></svg></span><span class="service__name">Обучение команды</span><span class="service__chev" aria-hidden="true">+</span></summary>
+            <div class="service__panel">
+              <p>Как безопасно работать с ИИ-инструментами и агентами.</p>
+              <p class="service__result">Результат: сотрудники пользуются, а не боятся.</p>
+            </div>
+          </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Команда -->
+    <section class="section section--dark" id="team">
+      <div class="container">
+        <div class="section__head">
+          <h2>Мы — 1С команда</h2>
+          <p class="section__descr">Разработка 1С, интеграции и ИИ-агенты собраны в одной команде: не нужно искать отдельных подрядчиков и связывать их работу между собой.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card card--dark">
+            <span class="badge">01</span>
+            <h3>Разработка 1С</h3>
+            <p>Дорабатываем УТ 11 и БП 3.0, пишем обработки, расширения и обмены. Работаем по стандартам 1С и стараемся не менять типовые объекты, чтобы конфигурация спокойно обновлялась.</p>
+          </article>
+          <article class="card card--dark">
+            <span class="badge">02</span>
+            <h3>Интеграции</h3>
+            <p>Связываем 1С с Битрикс24: сделки, документы, аналитика. Убираем перенос данных вручную и ответы на одни и те же вопросы.</p>
+          </article>
+          <article class="card card--dark">
+            <span class="badge">03</span>
+            <h3>ИИ-агенты</h3>
+            <p>Внедряем агентов поверх этих систем. Агент работает с вашими данными в 1С и Битрикс24 и берёт на себя рутину, а решения остаются за людьми.</p>
+          </article>
+        </div>
+        <ul class="tags" aria-label="Технологии">
+          <li>1С:Предприятие 8.3</li><li>УТ 11</li><li>БП 3.0</li><li>БСП</li><li>Битрикс24 REST</li>
+          <li>HTTP-сервисы</li><li>Claude</li><li>GPT</li><li>YandexGPT</li><li>GigaChat</li><li>Python</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Как работаем -->
+    <section class="section" id="process">
+      <div class="container">
+        <h2>Как мы работаем</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3>Диагностика</h3>
+            <p class="step__time">созвон</p>
+            <p>Разбираем задачу и процессы, предлагаем решение на 1С, в Битрикс24 или с ИИ-агентом.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3>Договор</h3>
+            <p class="step__time">оценка и сроки</p>
+            <p>Фиксируем объём работ, стоимость и порядок приёмки.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3>Спринты</h3>
+            <p class="step__time">работа частями</p>
+            <p>Закрываем задачи спринтами и показываем результат после каждого.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">4</span>
+            <h3>Внедрение</h3>
+            <p class="step__time">запуск и обучение</p>
+            <p>Подключаем к рабочей базе, настраиваем права, даём инструкцию и разбираем с сотрудниками.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">5</span>
+            <h3>Сопровождение</h3>
+            <p class="step__time">постоянно</p>
+            <p>Остаёмся на связи: доработки, обновления, развитие решения.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Кейсы -->
+    <section class="section section--flush" id="cases">
+      <div class="container">
+        <h2>Примеры работ</h2>
+        <div class="grid grid--3">
+          <article class="card case">
+            <h3>Маркировка: загрузка GTIN в УТ 11</h3>
+            <dl>
+              <dt>Задача</dt>
+              <dd>Коды GTIN от поставщиков приходят в Excel и вносились в 1С вручную, построчно.</dd>
+              <dt>Решение</dt>
+              <dd>Обработка читает XLSX, сама находит колонки, сопоставляет товары через номенклатуру контрагентов, загружает GTIN порциями и формирует протокол. Встроенная инструкция для пользователя.</dd>
+              <dt>Результат</dt>
+              <dd class="case__result">Сотни строк — за один запуск</dd>
+            </dl>
+          </article>
+          <article class="card case">
+            <h3>Аналитика документов 1С → Битрикс24</h3>
+            <dl>
+              <dt>Задача</dt>
+              <dd>Руководитель хочет видеть продажи и документы из 1С в Битрикс24 без ручных выгрузок в Excel.</dd>
+              <dt>Решение</dt>
+              <dd>Расширение 1С (типовая конфигурация не меняется) по расписанию выгружает сводные данные в смарт-процесс Б24. Графики строятся в BI-конструкторе. Работает в УТ 11, БП 3.0 и самописных конфигурациях.</dd>
+              <dt>Результат</dt>
+              <dd class="case__result">Дашборд в Битрикс24 вместо ручных отчётов</dd>
+            </dl>
+          </article>
+          <article class="card case">
+            <span class="badge">Типовое решение</span>
+            <h3>ИИ-агент для входящих заявок</h3>
+            <dl>
+              <dt>Задача</dt>
+              <dd>Заявки из почты и мессенджеров разбираются вручную, ответ клиенту задерживается.</dd>
+              <dt>Решение</dt>
+              <dd>Агент читает обращение, определяет тип и товар, заводит лид или сделку в Битрикс24, проверяет остатки и цены в 1С, готовит черновик ответа менеджеру.</dd>
+              <dt>Результат</dt>
+              <dd class="case__result">Менеджер получает готовую сделку, а не письмо</dd>
+            </dl>
+          </article>
+        </div>
+        <p class="note">Названия компаний не раскрываются.</p>
+      </div>
+    </section>
+
+    <!-- Форматы и цены -->
+    <section class="section section--flush" id="pricing">
+      <div class="container">
+        <div class="section__head">
+          <h2>Форматы внедрения ИИ-агентов</h2>
+          <p class="section__descr">Цены на доработки и разработку 1С указаны в разделе <a href="#services">«Что мы делаем»</a>.</p>
+        </div>
+        <div class="grid grid--3 pricing">
+          <article class="card price">
+            <h3>Аудит</h3>
+            <p class="price__value">от 15 000 ₽</p>
+            <p class="price__time">3–5 дней</p>
+            <p>Разбор процессов, карта автоматизации, расчёт экономии.</p>
+            <a class="btn btn--ghost" href="#request" data-topic="Аудит">Оставить заявку</a>
+          </article>
+          <article class="card price price--featured">
+            <span class="badge badge--accent">Популярный</span>
+            <h3>Пилот</h3>
+            <p class="price__value">от 60 000 ₽</p>
+            <p class="price__time">2–3 недели</p>
+            <p>Один агент под одну задачу на ваших данных.</p>
+            <a class="btn btn--primary" href="#request" data-topic="Пилот">Оставить заявку</a>
+          </article>
+          <article class="card price">
+            <h3>Внедрение под ключ</h3>
+            <p class="price__value">от 150 000 ₽</p>
+            <p class="price__time">1–2 месяца</p>
+            <p>Агенты + интеграция 1С и Битрикс24 + обучение + месяц поддержки.</p>
+            <a class="btn btn--ghost" href="#request" data-topic="Внедрение под ключ">Оставить заявку</a>
+          </article>
+        </div>
+        <p class="note">Стоимость аудита засчитывается в пилот, если продолжаем работу. Точная цена — после бесплатной 30-минутной консультации. Оплата нейросети (API) — отдельно, по фактическому использованию, считаем заранее.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--flush" id="faq">
+      <div class="container container--narrow">
+        <h2>Вопросы и ответы</h2>
+        <div class="faq">
+          <details open>
+            <summary>Можно заказать только доработку 1С, без ИИ?</summary>
+            <p>Да. Разработка на 1С — основа нашей работы: доработки, обработки, интеграции и обновления можно заказать отдельно от ИИ-агентов.</p>
+          </details>
+          <details>
+            <summary>Наши данные не утекут в нейросеть?</summary>
+            <p>Агент получает доступ только к тем данным, которые нужны для задачи. Персональные данные можно обезличивать перед отправкой в модель. Если требования строгие, используем российские модели (YandexGPT, GigaChat) или модель, развёрнутую на вашем сервере.</p>
+          </details>
+          <details>
+            <summary>У нас старая или самописная 1С — получится?</summary>
+            <p>Да. Подключаемся через HTTP-сервисы и обмены, доработки делаем расширениями, без изменения типовых объектов.</p>
+          </details>
+          <details>
+            <summary>Сколько стоит работа нейросети в месяц?</summary>
+            <p>Зависит от объёма запросов. На аудите считаем стоимость заранее, чтобы не было сюрпризов.</p>
+          </details>
+          <details>
+            <summary>Нужен ли у нас свой программист?</summary>
+            <p>Нет. Нужен ответственный со стороны процесса, который знает, как сейчас устроена работа.</p>
+          </details>
+          <details>
+            <summary>Что если агент ошибётся?</summary>
+            <p>Критичные действия подтверждает человек, а все действия агента записываются в журнал. Ошибку видно и легко исправить.</p>
+          </details>
+          <details>
+            <summary>Работаете по договору?</summary>
+            <p>Да, по договору с закрывающими документами.</p>
+          </details>
+          <details>
+            <summary>Работаете удалённо?</summary>
+            <p>Да, по всей России.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Статьи -->
+    <section class="section section--flush" id="articles">
+      <div class="container">
+        <div class="section__head">
+          <h2>Статьи: ИИ в повседневной работе</h2>
+          <p class="section__descr">Простым языком о том, чем ИИ помогает компании каждый день и как начать его использовать.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card article-card">
+            <p class="article-card__meta"><span class="badge">Рутина</span> 4 минуты</p>
+            <h3>Пять рутинных задач, которые можно передать ИИ-агенту</h3>
+            <p>Письма, документы, отчёты, ответы на типовые вопросы и проверка данных: что агент берёт на себя, а что остаётся за человеком.</p>
+            <a class="article-card__more" href="articles/rutina.html">Читать статью</a>
+          </article>
+          <article class="card article-card">
+            <p class="article-card__meta"><span class="badge">Данные</span> 3 минуты</p>
+            <h3>Вопрос обычным языком вместо отчёта: ИИ-ассистент по данным 1С</h3>
+            <p>Как сотруднику получить ответ из 1С без настройки отчётов и почему важно, откуда ассистент берёт цифры.</p>
+            <a class="article-card__more" href="articles/assistent-1c.html">Читать статью</a>
+          </article>
+          <article class="card article-card">
+            <p class="article-card__meta"><span class="badge">Внедрение</span> 4 минуты</p>
+            <h3>С чего начать внедрение ИИ в компании и как не навредить</h3>
+            <p>Как выбрать первую задачу, защитить данные, проверить результат на пилоте и подготовить сотрудников.</p>
+            <a class="article-card__more" href="articles/s-chego-nachat.html">Читать статью</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Заявка и обратная связь -->
+    <section class="section section--flush" id="request">
+      <div class="container">
+        <div class="request">
+          <div class="request__text">
+            <h2>Оставьте заявку</h2>
+            <p>Расскажите о задаче или задайте вопрос. Ответим в течение рабочего дня тем способом, который вы укажете.</p>
+            <ul class="request__points">
+              <li>Первая консультация — бесплатно, 30 минут</li>
+              <li>Работаем по договору с закрывающими документами</li>
+              <li>Работаем удалённо, по всей России</li>
+            </ul>
+          </div>
+          <div class="request__form">
+            <!-- ЗАМЕНИТЬ: адрес функции Yandex Cloud (см. Инструкция, раздел 5) -->
+            <form id="request-form" novalidate data-endpoint="">
+            <!-- /ЗАМЕНИТЬ -->
+              <div class="form-summary" id="form-summary" role="alert" hidden></div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-name">Имя *</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+                  <p class="form-error" id="f-name-error"></p>
+                </div>
+                <div class="form-group">
+                  <label for="f-contact">Телефон или e-mail *</label>
+                  <input id="f-contact" name="contact" type="text" autocomplete="on" maxlength="120" required>
+                  <p class="form-error" id="f-contact-error"></p>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-company">Компания</label>
+                  <input id="f-company" name="company" type="text" autocomplete="organization" maxlength="150">
+                </div>
+                <div class="form-group">
+                  <label for="f-topic">Тема обращения</label>
+                  <select id="f-topic" name="topic">
+                    <option>Нужна консультация</option>
+                    <option>Доработка 1С</option>
+                    <option>Обработка с нуля</option>
+                    <option>Интеграция с сайтом или маркетплейсом</option>
+                    <option>Перенос на новый релиз</option>
+                    <option>Сопровождение</option>
+                    <option>Интеграция 1С и Битрикс24</option>
+                    <option>Аудит</option>
+                    <option>Пилот</option>
+                    <option>Внедрение под ключ</option>
+                    <option>Вопрос или обратная связь</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="f-message">Задача или вопрос *</label>
+                <textarea id="f-message" name="message" rows="5" maxlength="3000" required></textarea>
+                <p class="form-error" id="f-message-error"></p>
+              </div>
+              <!-- Ловушка для ботов: поле скрыто от людей -->
+              <div class="form-trap" aria-hidden="true">
+                <label for="f-website">Сайт</label>
+                <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="form-consent">
+                <input id="f-consent" name="consent" type="checkbox" required>
+                <!-- Ссылка на privacy.html вернётся после регистрации статуса (см. Инструкция, раздел 6) -->
+                <label for="f-consent">Даю согласие на обработку персональных данных на условиях политики конфиденциальности *</label>
+              </div>
+              <p class="form-error form-error--consent" id="f-consent-error"></p>
+              <button class="btn btn--primary btn--full" type="submit">Отправить заявку</button>
+              <noscript><p class="form-error">Для отправки заявки включите JavaScript в браузере.</p></noscript>
+            </form>
+            <div class="form-done" id="form-done" tabindex="-1" hidden>
+              <h3>Заявка отправлена</h3>
+              <p>Спасибо! Ответим в течение рабочего дня.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> 1С команда · Разработка 1С и внедрение ИИ-агентов</p>
+      <p class="footer__links">
+        <a href="#request">Оставить заявку</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
